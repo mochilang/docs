@@ -1,0 +1,81 @@
+---
+title: Changelog
+description: Release history for the Mochi language, generated from the repository release notes.
+toc_min_heading_level: 2
+toc_max_heading_level: 2
+---
+
+import releases from '@site/src/data/releases.json';
+
+export const latest = releases.slice(0, 12);
+export const trains = releases.reduce((acc, release) => {
+  const train = `v${release.major}.${release.minor}`;
+  if (!acc[train]) acc[train] = [];
+  acc[train].push(release);
+  return acc;
+}, {});
+
+The website changelog is generated from the Markdown release notes in the
+repository's [`releases/`](https://github.com/mochilang/mochi/tree/main/releases)
+directory. Each release has its own page, so this index can stay readable while
+the full patch history remains available on the site.
+
+## Latest releases
+
+<table>
+  <thead>
+    <tr>
+      <th>Release</th>
+      <th>Period</th>
+      <th>Summary</th>
+    </tr>
+  </thead>
+  <tbody>
+    {latest.map(release => (
+      <tr key={release.tag}>
+        <td>
+          <a href={release.slug}>{release.tag}</a>
+        </td>
+        <td>{release.month || 'Release notes'}</td>
+        <td>{release.summary}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+## Release trains
+
+<table>
+  <thead>
+    <tr>
+      <th>Train</th>
+      <th>Range</th>
+      <th>Releases</th>
+    </tr>
+  </thead>
+  <tbody>
+    {Object.entries(trains).map(([train, items]) => (
+      <tr key={train}>
+        <td>{train}</td>
+        <td>
+          <a href={items[items.length - 1].slug}>{items[items.length - 1].tag}</a>
+          {' -> '}
+          <a href={items[0].slug}>{items[0].tag}</a>
+        </td>
+        <td>{items.length}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+## Upgrade path
+
+Start with the newest release page, then scan backwards through the release
+train that you are currently using. Patch releases in the same train are
+usually cumulative: compiler and runtime fixes, example corpus growth, docs
+updates, and release engineering improvements.
+
+For a raw chronological file, use
+[CHANGELOG.md](https://github.com/mochilang/mochi/blob/main/CHANGELOG.md) on
+GitHub. For source release notes, use the
+[`releases/`](https://github.com/mochilang/mochi/tree/main/releases) directory.

@@ -1,0 +1,466 @@
+[
+  {
+    "number": 0,
+    "title": "Index of Mochi Enhancement Proposals",
+    "status": "Active",
+    "type": "Process",
+    "description": "Index of Mochi Enhancement Proposals.",
+    "slug": "/docs/mep/mep-0000"
+  },
+  {
+    "number": 1,
+    "title": "Lexer",
+    "status": "Informational",
+    "type": "Informational",
+    "description": "Mochi's token classes, reserved words, lexical errors, and conformance corpus, specified end-to-end with no corner cases.",
+    "slug": "/docs/mep/mep-0001"
+  },
+  {
+    "number": 2,
+    "title": "Grammar",
+    "status": "Informational",
+    "type": "Informational",
+    "description": "Mochi's PEG grammar in full, with the design principles and conformance obligations that fix the language.",
+    "slug": "/docs/mep/mep-0002"
+  },
+  {
+    "number": 3,
+    "title": "Abstract Syntax Tree",
+    "status": "Informational",
+    "type": "Informational",
+    "description": "Mochi's AST as a closed family of tagged unions, the encoding that makes parse output unambiguous, and the soundness invariants every consumer can rely on.",
+    "slug": "/docs/mep/mep-0003"
+  },
+  {
+    "number": 4,
+    "title": "Type System",
+    "status": "Informational",
+    "type": "Informational",
+    "description": "The kinds, the comparisons, the numeric tower, and the places where Mochi's type system does not yet do what it claims.",
+    "slug": "/docs/mep/mep-0004"
+  },
+  {
+    "number": 5,
+    "title": "Type Inference",
+    "status": "Active",
+    "type": "Standards Track",
+    "description": "Strict static algebraic type inference. Principal types, no implicit any, no null.",
+    "slug": "/docs/mep/mep-0005"
+  },
+  {
+    "number": 6,
+    "title": "Type Checker",
+    "status": "Informational",
+    "type": "Informational",
+    "description": "Entry point, builtin environment, statement walk, and the diagnostic catalogue.",
+    "slug": "/docs/mep/mep-0006"
+  },
+  {
+    "number": 7,
+    "title": "Soundness",
+    "status": "Active",
+    "type": "Process",
+    "description": "Progress, preservation, and the test obligations that prove them.",
+    "slug": "/docs/mep/mep-0007"
+  },
+  {
+    "number": 8,
+    "title": "Test Strategy",
+    "status": "Active",
+    "type": "Process",
+    "description": "The five test layers, the golden harness, and the TAPL chapter mapping.",
+    "slug": "/docs/mep/mep-0008"
+  },
+  {
+    "number": 9,
+    "title": "Fixture Catalogue",
+    "status": "Informational",
+    "type": "Informational",
+    "description": "Inventory of parser and type fixtures with a property coverage matrix.",
+    "slug": "/docs/mep/mep-0009"
+  },
+  {
+    "number": 10,
+    "title": "Known Gaps and Weakness Review",
+    "status": "Informational",
+    "type": "Informational",
+    "description": "Catalogue of soundness gaps, surprising behavior, and tracked follow-ups.",
+    "slug": "/docs/mep/mep-0010"
+  },
+  {
+    "number": 11,
+    "title": "Subtyping and Variance",
+    "status": "Active",
+    "type": "Standards Track",
+    "description": "A separate subtype predicate, the variance lattice, and the closure of any.",
+    "slug": "/docs/mep/mep-0011"
+  },
+  {
+    "number": 12,
+    "title": "Parametric Polymorphism",
+    "status": "Active",
+    "type": "Standards Track",
+    "description": "System-F-lite call-site inference, fresh type variables, and the end of any-builtins.",
+    "slug": "/docs/mep/mep-0012"
+  },
+  {
+    "number": 13,
+    "title": "Algebraic Data Types and Match",
+    "status": "Draft",
+    "type": "Standards Track",
+    "description": "Struct and union typing rules, match exhaustiveness, irredundancy, and recursive types.",
+    "slug": "/docs/mep/mep-0013"
+  },
+  {
+    "number": 14,
+    "title": "Query Algebra",
+    "status": "Informational",
+    "type": "Informational",
+    "description": "LINQ-shaped query expressions, clause-by-clause type rules, and aggregate semantics.",
+    "slug": "/docs/mep/mep-0014"
+  },
+  {
+    "number": 15,
+    "title": "Effects",
+    "status": "Draft",
+    "type": "Standards Track",
+    "description": "A labeled effect system over function types. Pure by default, inferred from the body, annotatable at module boundaries, enforced where purity matters.",
+    "slug": "/docs/mep/mep-0015"
+  },
+  {
+    "number": 16,
+    "title": "Null Safety",
+    "status": "Draft",
+    "type": "Standards Track",
+    "description": "Total option discipline with no force unwrap, flow narrowing, safe-call and coalesce operators, and a no-panic guarantee.",
+    "slug": "/docs/mep/mep-0016"
+  },
+  {
+    "number": 17,
+    "title": "VM Performance Methodology and Baseline",
+    "status": "Active",
+    "type": "Process",
+    "description": "How Mochi measures, reports, and gates VM performance changes, with a reference benchmark suite and a regression budget.",
+    "slug": "/docs/mep/mep-0017"
+  },
+  {
+    "number": 18,
+    "title": "Bytecode Dispatch in a Go-Hosted VM",
+    "status": "Active",
+    "type": "Standards Track",
+    "description": "What dispatch techniques work for the Mochi VM under the constraints of the Go runtime, with a concrete plan for the next 18 months.",
+    "slug": "/docs/mep/mep-0018"
+  },
+  {
+    "number": 19,
+    "title": "Adaptive Specialization and Inline Caches",
+    "status": "Active",
+    "type": "Standards Track",
+    "description": "Quickening generic opcodes into typed variants on first observation, plus monomorphic and polymorphic inline caches for the few remaining dynamic call sites.",
+    "slug": "/docs/mep/mep-0019"
+  },
+  {
+    "number": 20,
+    "title": "Value Representation and Allocation Discipline",
+    "status": "Active",
+    "type": "Standards Track",
+    "description": "A tighter Value struct, sync.Pool for frames and slabs, and an escape audit on the hot path of the Mochi VM.",
+    "slug": "/docs/mep/mep-0020"
+  },
+  {
+    "number": 21,
+    "title": "Compiler2 and VM2 Co-Design for Maximum Interpreter Throughput",
+    "status": "Active",
+    "type": "Standards Track",
+    "description": "A first-principles redesign of the Mochi compile-and-execute pipeline. Replace the observation-driven runtime with a typed SSA compiler (compiler2) that emits monomorphic bytecode into a redesigned vm2 with NaN-boxed 8-byte values, register allocation, tail calls, and bounds-check elision. No backward compatibility constraints. Target the absolute throughput ceiling of a Go-hosted interpreter on statically typed source.",
+    "slug": "/docs/mep/mep-0021"
+  },
+  {
+    "number": 22,
+    "title": "Baseline JIT via Copy-and-Patch (Deferred)",
+    "status": "Deferred",
+    "type": "Informational",
+    "description": "A non-optimizing baseline JIT built on copy-and-patch compilation, planned as the long-term tier above the interpreter once MEP-18 through MEP-21 are exhausted. Co-designed with MEP-21 typed bytecode so the JIT consumes already-typed instructions and inherits zero speculative complexity from a dynamic front end.",
+    "slug": "/docs/mep/mep-0022"
+  },
+  {
+    "number": 23,
+    "title": "Cross-language Baseline Benchmarks",
+    "status": "Active",
+    "type": "Process",
+    "description": "A periodic, hand-written cross-language benchmark suite that positions Mochi against Python and Lua on the same workloads, separate from the MEP-17 per-PR gate.",
+    "slug": "/docs/mep/mep-0023"
+  },
+  {
+    "number": 24,
+    "title": "VM2 Subsystem Design (Objects, Strings, Structs, Lists, Maps, Closures, GC, Errors)",
+    "status": "Active",
+    "type": "Standards Track",
+    "description": "A consolidated subsystem design for vm2 that replaces the ad-hoc per-feature opcode growth of MEPs 18-21 with a single coherent plan for value representation, heap-allocated types, garbage collection, exception/Result handling, and the porting path to feature parity with the legacy VM. Co-designed with a comprehensive correctness + benchmark gate.",
+    "slug": "/docs/mep/mep-0024"
+  },
+  {
+    "number": 25,
+    "title": "VM2 Data Model (Strings, Lists, Maps, Sets, Structs)",
+    "status": "Active",
+    "type": "Standards Track",
+    "description": "Algorithmically modern in-memory representations for vm2's five core container kinds, strings, lists, maps, sets, structs, replacing the MEP-24 MVP shapes with shapes that close the Lua gap on the cross-language baseline and stay competitive after a future JIT lands. Specifies SSO + rope strings, type-specialized lists, Swiss-style int-keyed maps, presence-only set storage, and slot-packed structs. Implementation strategy is selected from three competing approaches detailed in MEP-26, MEP-27, MEP-28.",
+    "slug": "/docs/mep/mep-0025"
+  },
+  {
+    "number": 26,
+    "title": "VM2 Data Model Option 1 - Monomorphic + One-Way Migration",
+    "status": "Draft",
+    "type": "Standards Track",
+    "description": "First of three competing dispatch-strategy specs for the MEP-25 data model. Each container starts in the smallest shape that fits its first operation and migrates exactly once, in place, to a more general shape on the first operation that does not fit. The monomorphic-then-generic lattice is the same one used by V8 hidden classes, PyPy storage strategies, Lua table promotion, CRuby shape trees, and Rust SmallVec. This MEP specifies the lattice formally, derives per-op steady-state cost, bounds migration cost over a program lifetime, analyzes JIT integration, and predicts MEP-23 numbers.",
+    "slug": "/docs/mep/mep-0026"
+  },
+  {
+    "number": 27,
+    "title": "VM2 Data Model Option 2 - Polymorphic + Inline Caches",
+    "status": "Draft",
+    "type": "Standards Track",
+    "description": "Second of three competing dispatch-strategy specs for the MEP-25 data model. Every container kind exposes one polymorphic shape, but each opcode site carries a small inline cache of recently-seen sub-shapes. The hot path stays monomorphic at the call-site granularity while the runtime remains structurally polymorphic. Lineage traces to Self, Smalltalk-80, V8, and SpiderMonkey. This MEP specifies the IC slot layout, the monomorphic / polymorphic / megamorphic state machine, per-op cost, IC memory budget, JIT integration, and predicts MEP-23 numbers.",
+    "slug": "/docs/mep/mep-0027"
+  },
+  {
+    "number": 28,
+    "title": "VM2 Data Model Option 3 - AOT Codegen Specialization",
+    "status": "Draft",
+    "type": "Standards Track",
+    "description": "Third of three competing dispatch-strategy specs for the MEP-25 data model. The compiler enumerates each opcode's operand-shape tuple at emit time and lowers each tuple to a distinct specialized opcode. No shape dispatch at runtime, no inline caches, no migration. The interpreter loop dispatches on opcode and runs specialized code directly. Lineage traces to LuaJIT specialized opcodes, Julia method specialization, Crystal and Nim monomorphization, and Rust generic instantiation. This MEP specifies the (op, shape) enumeration scheme, the bytecode size impact, the codegen explosion bound, the fallback path for shape-unknown sites, the JIT cooperation model, and predicts MEP-23 numbers.",
+    "slug": "/docs/mep/mep-0028"
+  },
+  {
+    "number": 29,
+    "title": "VM2 Dispatch Strategy - Measured Results",
+    "status": "Informational",
+    "type": "Informational",
+    "description": "Head-to-head benchmark of the three dispatch strategies specified in MEP-26 (Migration), MEP-27 (Inline Cache) and MEP-28 (AOT codegen) on canonical workloads for two containers, lists (fill_sum) and strings (concat_loop). Sibling prototype packages under runtime/vm2/listopt/ and runtime/vm2/stropt/ implement each strategy in isolation. Lists, AOT wins narrowly, IC regresses substantially. Strings, all three rope-aware strategies trounce the today-shape baseline because the algorithmic O(N²) to O(N) win swamps the dispatch cost. The two containers point at opposite engineering choices, and the result inverts the design-stage MEP predictions in both cases.",
+    "slug": "/docs/mep/mep-0029"
+  },
+  {
+    "number": 30,
+    "title": "VM2 JIT Option A - Template / Copy-and-Patch Baseline JIT",
+    "status": "Active",
+    "type": "Standards Track",
+    "description": "First of three competing JIT strategy specs for vm2. Each opcode handler is pre-compiled once into a position-independent native snippet, stored as a byte slice keyed by (opcode, shape-tuple), then concatenated and patched into an mmap'd executable buffer at function load. No IR, no register allocator, no inliner. The result is a non-optimizing baseline JIT in the lineage of V8 Sparkplug, JSC's Baseline JIT, and CPython 3.13's copy-and-patch JIT. This MEP specifies the snippet harvesting pipeline, the patcher ABI, the interpreter-compatible frame layout that makes OSR trivial, the deopt-free guard model, the distribution story (single Go binary, no cgo), and predicts a 2-4x speedup over the vm2 interpreter on fill_sum-class workloads.",
+    "slug": "/docs/mep/mep-0030"
+  },
+  {
+    "number": 31,
+    "title": "VM2 JIT Option B - Tracing JIT over Typed Loops",
+    "status": "Draft",
+    "type": "Standards Track",
+    "description": "Second of three competing JIT strategy specs for vm2. The interpreter counts iterations of every back-edge; when a counter trips, the runtime begins recording a linear trace of typed Cell operations starting from that back-edge. The trace is closed when control returns to the same back-edge, optimized in straight-line form (constant folding, allocation removal, guard hoisting), and compiled to native via golang-asm. Subsequent iterations execute the compiled trace; any guard failure side-exits back to the interpreter. Lineage traces to LuaJIT (single-level, hand-coded) and PyPy (meta-tracing, RPython-generated). This MEP specifies the trace recorder, the trace-IR with explicit guards, the guard-keyed side-exit table, the trace tree shape, and predicts a 5-15x speedup on numeric loops at a 4-6x larger engineering scope than MEP-30.",
+    "slug": "/docs/mep/mep-0031"
+  },
+  {
+    "number": 32,
+    "title": "VM2 JIT Option C - Tiered Method JIT with Type Feedback",
+    "status": "Draft",
+    "type": "Standards Track",
+    "description": "Third of three competing JIT strategy specs for vm2. Two compilation tiers stacked on the interpreter: tier 1 is the MEP-30 copy-and-patch baseline JIT; tier 2 is a typed-SSA optimizing method JIT that consumes type feedback from MEP-27 inline caches, performs profile-guided inlining and escape analysis, and emits native code with linear-scan register allocation. Bidirectional on-stack replacement (OSR) moves frames between interpreter, tier 1, and tier 2 mid-execution; speculative tier-2 code deopts back to tier 1 on guard failure. Lineage traces to HotSpot C1/C2, JSC's four-tier strategy (LLInt, Baseline, DFG, FTL), and V8's Ignition / Sparkplug / Maglev / Turbofan pipeline. This MEP specifies tier transitions, the optimizing IR, the deopt protocol, the inlining heuristic, and predicts a 4-8x speedup with the broadest workload coverage of the three options.",
+    "slug": "/docs/mep/mep-0032"
+  },
+  {
+    "number": 33,
+    "title": "MEP-30 Template JIT - Measured Results",
+    "status": "Informational",
+    "type": "Informational",
+    "description": "First measured-results report for the MEP-30 template / copy-and-patch baseline JIT. A reference prototype lives under runtime/jit/tmpljit and implements a 6-opcode register VM plus a copy-and-patch JIT that lowers each opcode to a fixed AArch64 instruction sequence and stitches them into an mmap'd executable page. On a canonical fillsum workload at N=1024 on Apple M4, the JIT runs at 418 ns/op vs 7177 ns/op for the same-shape interpreter, a 17.2x speedup, beating LuaJIT (532 ns/op) and matching hand-written Go (499 ns/op) within 17%. At N=10000 the JIT edges out Go native (3883 vs 5025 ns/op) because the JIT loop carries no Go preemption check. CPython 3.14 lands at 23899 ns/op, ~57x slower than the JIT. Results validate the MEP-30 design and recommend proceeding to a full vm2-opcode prototype.",
+    "slug": "/docs/mep/mep-0033"
+  },
+  {
+    "number": 34,
+    "title": "VM2 Full-Opcode JIT - Lists, Strings, Maps, Sets, Structs",
+    "status": "Active",
+    "type": "Standards Track",
+    "description": "Production-track spec for the next JIT after the MEP-30 prototype. Extends MEP-30's template / copy-and-patch design from the 6-opcode tmpljit toy to the full vm2 opcode set, with first-class native support for the five container subsystems (lists, strings, maps, sets, structs). Specifies per-opcode codegen templates, the frame-compatibility contract that lets the JIT and the vm2 interpreter share a Cell-shaped register file across calls, the Cell NaN-boxing fast paths and slow-path runtime callbacks, the cross-architecture backend split (darwin/arm64 + linux/amd64 from day one), and the benchmark plan that gates merge: head-to-head against the vm2 interpreter, LuaJIT, Lua 5.5, and CPython 3.14 on the MEP-23 corpus and on each container's hot ops. Predicts 3-6x over vm2 on list / arithmetic loops, 1.5-3x on string and map workloads, and parity with LuaJIT on numeric loops by Phase 3.",
+    "slug": "/docs/mep/mep-0034"
+  },
+  {
+    "number": 35,
+    "title": "Auto Memory Management for the VM2 Objects Table",
+    "status": "Draft",
+    "type": "Standards Track",
+    "description": "Survey of modern auto memory management (Perceus / Koka / Roc, Inko, Lobster, Verona / Reggio regions, Immix / LXR, MMTk, generational ZGC / Shenandoah, JSC Riptide) and a design overview for reclaiming entries in the vm2 Objects table. Today the table is append-only inside a Run: every list, map, heap string, closure, and boxed big-int allocated by a program stays live until Run exits, regardless of whether the program still references it. This MEP proposes three implementation options (Perceus-style reference counting with reuse, per-frame region arenas, and an Immix / LXR mark-region collector layered over the Objects table) and a recommendation.",
+    "slug": "/docs/mep/mep-0035"
+  },
+  {
+    "number": 36,
+    "title": "Restructure VM2 to Reuse Go's GC",
+    "status": "Active",
+    "type": "Standards Track",
+    "description": "Restructure the vm2 value representation so container payloads (lists, maps, heap strings, closures, boxed big ints, structs, sets) are reachable from each operand-stack slot via a real Go pointer, and the per-Run Objects []any indirection table can be reclaimed mid-Run. Today the NaN-boxed Cell stores a 48-bit index into Objects []any, so every list/map/string read pays a bounds check plus a type assertion (5 to 8 percent of CPU on container workloads per MEP-29), and Objects is append-only within a Run so dead containers cannot be freed until Run() exits. This MEP surveys modern VM-on-host-GC designs (Goja, starlark-go, Yaegi, Truffle, WasmGC, CRuby + MMTk), the Go-specific cost of interface boxing and the hybrid write barrier, and the allocation-minimization literature (Perceus, Roc, PLDI 2024 dynamic heapification, V8 Smi, .NET / Valhalla value types). It then specifies the smallest refactor that pays off: keep the 8-byte NaN-boxed Bits field, add a single 8-byte unsafe.Pointer field that GC traces on pointer-tagged cells (so Cell becomes 16 bytes, not 24), kill the indirection in container accessors, and zero pointer slots on popFrame so dead containers become collectible. Goal: zero allocations on the hot path for pure-numeric loops, one Go-tracked allocation per container constructor and zero per element, and full reclamation of dead containers between GC cycles, with the operand stack growing by 2x rather than 3x.",
+    "slug": "/docs/mep/mep-0036"
+  },
+  {
+    "number": 37,
+    "title": "Benchmarks Game Parity with Go",
+    "status": "Active",
+    "type": "Standards Track",
+    "description": "Define the full Computer Language Benchmarks Game corpus as a long-running performance target for vm2, audit each program's data and control-flow shape against the current runtime, and specify the data-model and VM enhancements required to reach within 2x of `go run` on each. The catalog covers the ten canonical BG benchmarks (binary_trees, fannkuch_redux, fasta, k_nucleotide, mandelbrot, n_body, pidigits, regex_redux, reverse_complement, spectral_norm). The gap analysis identifies four bottlenecks vm2 must close to reach Go parity: missing float arithmetic opcodes (every numeric BG kernel besides binary_trees / fannkuch is double-dominated), boxed Cell storage for homogeneous arrays (each element pays 16 bytes plus indirection where Go uses 8 bytes inline), per-node heap allocation for tree-shaped data, and absence of byte-string slicing without copy. The plan lands in four phases, each independently mergeable and benchmark-gated, with the headline goal being end-to-end BG numbers within 2x of Go on the workloads phase 1+2 cover and a credible path on the remaining four.",
+    "slug": "/docs/mep/mep-0037"
+  },
+  {
+    "number": 38,
+    "title": "Closing the BG Gap to 2x Go via Byte Views and Native Lowering",
+    "status": "Draft",
+    "type": "Standards Track",
+    "description": "Extend MEP-37 with the concrete plan that takes vm2 from its current 115x-171x ratios on the Benchmarks Game corpus down to the 2x-of-Go target stated in MEP-37's abstract. Layer one (this MEP) ships the byte-view runtime (vmBytes) and minimal stdin/stdout that MEP-37 §3.5 deferred. Layer two ships JIT lowering for the typed-array and float-arithmetic op families so each BG kernel's hot loop compiles to native arm64/amd64 instead of going through the dispatch interpreter. Layer three ships a leaf-inline emit pass that absorbs per-byte function calls like reverse_complement's complement(). Each layer is independently mergeable; the BG gate progresses one program at a time as the layer that program needs lands. The MEP also contains a deep-research appendix that derives the theoretical lower bound for each kernel's runtime from the host hardware's instruction-issue rate, cache hierarchy, and branch mispredict cost, and shows where the current vm2 dispatch loop sits relative to that bound.",
+    "slug": "/docs/mep/mep-0038"
+  },
+  {
+    "number": 39,
+    "title": "Full Benchmarks Game Suite Across mochi/go/python/lua",
+    "status": "Draft",
+    "type": "Standards Track",
+    "description": "Bring the cross-language benchmark harness up to the canonical Benchmarks Game suite (all 10 programs) with parity templates in mochi, go, python, and lua. MEP-37 and MEP-38 covered six programs at the IR-builder level (binary_trees, n_body, mandelbrot, fannkuch_redux, spectral_norm, reverse_complement) but only binary_trees and nsieve had cross-lang templates wired into bench/crosslang. This MEP closes that gap on two fronts: (a) scaffold cross-lang templates for the five existing IR kernels plus four missing programs (fasta, k-nucleotide, pidigits, regex-redux), and (b) add the runtime features those programs need (bignum in vm2 for pidigits, regex builtins audit for regex-redux). The MEP captures the pre-implementation baseline for the 11 currently wired programs, the post-implementation full-suite baseline, and then deep-dives the per-program optimization theory required to land each program inside the 2x-of-Go gate that MEP-37 set.",
+    "slug": "/docs/mep/mep-0039"
+  },
+  {
+    "number": 40,
+    "title": "vm3 + compiler3: 8-byte handle Cell, typed arenas, static-type-driven dispatch",
+    "status": "Draft",
+    "type": "Standards Track",
+    "description": "First-principles successor stack to runtime/vm2 + compiler2. Replaces the 16-byte split Cell (Bits uint64 + Obj unsafe.Pointer) with an 8-byte NaN-boxed handle Cell that addresses per-type Go-allocated arenas. Replaces the single Cell[] frame register file with three typed banks (regsI64, regsF64, regsCell). Replaces compiler2's flat IR with compiler3's static-type-driven IR that propagates Mochi's static type system end-to-end so the interpreter and JIT never reason about types at runtime. Keeps Go's GC by making arena slabs the only pointer roots (handles are uint64 indices into typed slabs, not pointers). Phased to a production cut-over of bench harness, language server, and REPL over roughly six months.",
+    "slug": "/docs/mep/mep-0040"
+  },
+  {
+    "number": 41,
+    "title": "Memory Safety: capability handles, generational references, and CISA-roadmap alignment",
+    "status": "Draft",
+    "type": "Standards Track",
+    "description": "A first-principles memory-safety MEP for Mochi as of May 2026. Positions Mochi as a memory-safe language in the CISA / NSA / ONCD taxonomy by formalizing the safety property already paid for by the vm3 + compiler3 stack: an 8-byte handle Cell that is mathematically a Vale generational reference (POPL 2023 wave), an MSWasm-style unforgeable capability (OOPSLA 2024 Iris mechanization), and a CHERI-shape fat pointer at the language layer. Specifies the bytecode verifier rules that make handle integrity an invariant, the typed-arena partition that doubles as a kalloc_type / xzone typed-allocator (Apple MIE 2025), generation-as-secret hygiene against Tag Confidentiality Enforcement style leaks, optional reference modes (consume / borrow / inout / weak) layered on OxCaml-style mode axes, FFI sealing for safe Go-runtime handoff, and W^X + PAC/BTI + Spectre-index-masking hardening for the vm3jit code page. Includes a phased plan that culminates in a public Mochi memory-safety statement aligned to the CISA Secure-by-Design Pledge January 1 2026 roadmap obligation.",
+    "slug": "/docs/mep/mep-0041"
+  },
+  {
+    "number": 42,
+    "title": "Native Code Emission: copy-and-patch JIT, C-as-target AOT, and a Wasm-first cross-platform story",
+    "status": "Draft",
+    "type": "Standards Track",
+    "description": "A first-principles native code-emission MEP for Mochi as of May 2026. compiler3 already produces a typed IR with proven SSA value types; MEP-42 specifies how that IR lowers to host machine code on every platform Mochi can credibly ship to. The architecture chooses two complementary phase-1 backends: a copy-and-patch JIT (Xu+Kjolstad PLDI 2021, validated by CPython 3.13 in October 2024) for hot-loop execution under `mochi run`, and C-as-target AOT (Nim / V / Vala lineage) for `mochi build` distributable binaries. Phase 1 targets five host combinations (x86_64 Linux, aarch64 Linux, aarch64 macOS, x86_64 macOS, wasm32+WasmGC), all reachable from any Go host without cgo. Phase 2 adds Windows x86_64/aarch64, riscv64 Linux, an APE bundler, plus a native Wasm emitter and a QBE backend for higher-quality small binaries. Linker strategy: LLD by default, system linker fallback, self-hosted ELF/Mach-O/PE writers in phase 2 following Go cmd/link. Runtime strategy: glibc default, musl static-PIE for portable mode. Debug strategy: DWARF 5 line tables phase 1, full DWARF + optional PDB phase 2. The closest existing analog is Crystal; the case study to learn most from is .NET NativeAOT.",
+    "slug": "/docs/mep/mep-0042"
+  },
+  {
+    "number": 43,
+    "title": "Zero-Boilerplate Go Transpiler and Go FFI via go/types Introspection",
+    "status": "Draft",
+    "type": "Standards Track",
+    "description": "A first-principles design MEP for the Mochi to Go transpiler and the Mochi to Go foreign function interface, written as one document because they are the same problem viewed from two angles. The hard constraint is that Mochi ships zero per-package and zero per-syntactic-construct hand-written glue. The architecture rests on three generic pieces: a single type-bridge function that maps `go/types.Type` to and from compiler3 IR types, a build-time binding resolver that consumes any reachable Go package via `golang.org/x/tools/go/packages`, and a typed-IR to Go-source emitter sized to compiler3's ~50 op kinds. The emitted Go module imports the user's actual Go packages and calls them directly, so the Go compiler does the static checking and the Go runtime does the execution; Mochi adds no reflection, no marshalling, and no per-call overhead. The shipped Mochi runtime for the Go target is itself a normal Go module under `runtime/mochi/`, written once in idiomatic Go with normal Go tests, that the emitter calls into. The closest existing analog on the FFI side is Yaegi's `extract.go` symbol-table generator (the only deployed example of `go/types` driving a zero-per-package binding pipeline); on the transpiler side, Nim's typed-IR C backend (~50 op kinds drive a full systems language). The anti-pattern this MEP forecloses by name is the runtime reflection registry `Call(name, args...)`, which moves glue from compile time to runtime without deleting it.",
+    "slug": "/docs/mep/mep-0043"
+  },
+  {
+    "number": 44,
+    "title": "Type Bridge: a structural Go-to-Mochi type mapping for the zero-glue Go target",
+    "status": "Draft",
+    "type": "Standards Track",
+    "description": "Deep-dive specification of MEP-43 Phase 1: the structural type bridge that maps `go/types.Type` to a Mochi-side structural Type and back to a Go source-level type string. This is the only finite, hand-maintained mapping in the MEP-43 pipeline. Every later phase (binding resolver, Go-source emitter, runtime/mochi, export direction) consumes the output of this bridge; if a mapping is wrong here, every consumer is wrong. The bridge is built around a small structural `Type` value type carrying a kind, optional element/key/value/field/method children, and an opaque carrier that preserves the original `go/types.Type` for round-tripping unsupported Go shapes. The bridge has no per-package code and no per-symbol code; it is per-Go-type-shape only. Phase 1 ships in eight named sub-phases (1.1 type model through 1.8 stable gob serialisation), each gated by a measurable acceptance criterion, with the final gate being 100% of the Go 1.26 stdlib's exported surface either mapping to a structural Mochi type or being explicitly marked `KindOpaque` with a documented reason.",
+    "slug": "/docs/mep/mep-0044"
+  },
+  {
+    "number": 45,
+    "title": "Mochi-to-C transpiler: ahead-of-time native binaries via C as target language",
+    "status": "Draft",
+    "type": "Standards Track",
+    "description": "Standalone AOT pipeline that lowers a type-checked Mochi program to ISO C23 source plus a thin portable runtime (libmochi), then drives a vendored cross-cc to ship a statically linked single-file native binary for every tier-1 triple (x86_64-linux-{gnu,musl}, aarch64-linux-{gnu,musl}, aarch64-darwin, x86_64-darwin, x86_64-windows-msvc, x86_64-windows-gnu, wasm32-wasi). MEP-45 owns its full pipeline: parser → typed AST (reused frontends) → monomorphisation → aotir (its own lowering IR) → C source → cc → binary. The implementation lives in a new tree `transpiler3/c/` and shares nothing with prior backends past the parser and type checker. The proposal is additive: `mochi run` keeps the vm3 path; `mochi build --target=c` (and every native triple) routes through this pipeline. The master correctness gate is byte-equal stdout against vm3 on the full fixture corpus; vm3 acts only as the recording oracle, not as a code dependency. The runtime stands on proven third-party pieces (BDWGC for GC, mimalloc for the allocator, minicoro for fibers, yyjson for JSON, cwisstable for hash tables, libcurl for HTTP, utf8proc for Unicode). Generic types are fully monomorphised (Mochi forbids polymorphic recursion so the instantiation set is finite). Pattern matching lowers via Maranget decision trees (ML Workshop 2008). Try/catch lowers via setjmp/longjmp. Closures are fat pointers (code + env). The 20-phase delivery plan walks from hello-world through the full language surface, then cross-architecture, then APE one-binary-for-every-OS, then LLM and datalog and FFI, then sanitiser-clean + reproducible + perf gates. Every phase is gated; no phase ships until each target in its row is green. Twelve research notes covering every lowering case live under ~/notes/Spec/0045/.",
+    "slug": "/docs/mep/mep-0045"
+  },
+  {
+    "number": 46,
+    "title": "Mochi-to-Erlang/BEAM transpiler: concurrent, distributed runtime via Core Erlang as target",
+    "status": "Final",
+    "type": "Standards Track",
+    "description": "Standalone pipeline that lowers a type-checked Mochi program to Core Erlang (via the `cerl` API), drives `compile:forms/2` with `from_core`, and packages the resulting `.beam` files as either an escript or an OTP release. MEP-46 owns its emit pass and its runtime library `mochi` but reuses MEP-45's `aotir` IR plus monomorphisation/closure-conversion passes. The proposal is additive: `mochi build --target=beam-escript` and `--target=beam-release` route Mochi through the BEAM pipeline; `mochi run` keeps the vm3 path; MEP-45's C target stays the AOT performance story. BEAM is the concurrency, supervision, hot-reload, and distribution story. The master correctness gate is byte-equal stdout against vm3 on the full fixture corpus across OTP 27 and OTP 28 on x86_64-linux-gnu and aarch64-darwin. Mochi agents lower to `gen_server`, streams to `pg` process groups, async/await to monitored spawn+receive, sum types to tagged tuples, records to BEAM maps, strings to UTF-8 binaries, fun types to BEAM closures. The runtime library `mochi` (Apache-2.0) publishes to Hex.pm as a thin layer over `pg`, `gen_server`, `gun`, the OTP 27 stdlib `json` module, and `telemetry`. The 19-phase delivery plan walks from hello-world through scalars, collections, records, sums, closures, queries, datalog, agents, streams, async, FFI, LLM, fetch, then escripts, releases, AtomVM, Dialyzer, and reproducibility. Each phase is gated against vm3. Twelve research notes covering every lowering case live under ~/notes/Spec/0046/.",
+    "slug": "/docs/mep/mep-0046"
+  },
+  {
+    "number": 47,
+    "title": "Mochi-to-JVM transpiler: Maven Central ecosystem, Loom-native agents, GraalVM native-image AOT",
+    "status": "Final",
+    "type": "Standards Track",
+    "description": "Standalone pipeline that lowers a type-checked Mochi program to Java source emitted via `javax.tools.JavaCompiler`, with a `java.lang.classfile` (ClassFile API, JEP 484) direct-bytecode fallback for hot lowerings. Packages the resulting `.class` files as an uberjar, a `jlink` runtime image, a `jpackage` installer, or a GraalVM `native-image` ahead-of-time executable. MEP-47 owns its emit pass and its runtime library `dev.mochi.runtime` but reuses MEP-45's `aotir` IR plus monomorphisation/closure-conversion passes shared with MEP-46. The proposal is additive: `mochi build --target=jvm-uberjar` and friends route Mochi through the JVM pipeline; `mochi run` keeps the vm3 path; MEP-45's C target stays the AOT single-binary story; MEP-46's BEAM target stays the supervision/hot-reload story. The JVM target is the Maven Central, Project Loom virtual threads, java.util.stream, GraalVM AOT, and JDK FFI story. The master correctness gate is byte-equal stdout against vm3 on the full fixture corpus across JDK 21 LTS and JDK 25 LTS on x86_64-linux-gnu, aarch64-linux-gnu, aarch64-darwin, and x86_64-windows. Mochi agents lower to Loom virtual threads with `BlockingQueue` mailboxes, streams to `java.util.concurrent.Flow.Publisher`, sum types to sealed interfaces + records, match to JDK 21 switch patterns (JEP 440 + JEP 441), strings to `java.lang.String`, fun types to lambdas via `LambdaMetafactory`. The runtime library `dev.mochi.runtime` (Apache-2.0) publishes to Maven Central via the new Central Publisher Portal as a thin layer over Jackson 2.18, snakeyaml-engine, java.net.http, and JFR. The 18-phase delivery plan walks from hello-world through scalars, collections, records, sums, closures, queries, datalog, agents, streams, async, JDK FFI, LLM, fetch, then uberjars, jlink, jpackage, GraalVM native-image, and reproducibility. Each phase is gated against vm3. Twelve research notes covering every lowering case live under ~/notes/Spec/0047/.",
+    "slug": "/docs/mep/mep-0047"
+  },
+  {
+    "number": 48,
+    "title": "Mochi-to-.NET transpiler: NuGet ecosystem, async/await colouring, NativeAOT single-file binaries",
+    "status": "Active",
+    "type": "Standards Track",
+    "description": "Standalone pipeline that lowers a type-checked Mochi program to C# source emitted via Roslyn `SyntaxFactory`, with a `System.Reflection.Emit` (and .NET 9 `PersistedAssemblyBuilder`) direct-IL fallback for agent trampolines and hot lowerings. Packages the resulting `.dll`/`.exe` as a framework-dependent assembly, a self-contained publish directory, or a NativeAOT single-file binary. MEP-48 owns its emit pass and its runtime library `Mochi.Runtime` but reuses MEP-45's `aotir` IR plus monomorphisation/closure-conversion passes shared with MEP-46 and MEP-47. The proposal is additive: `mochi build --target=dotnet-fx-dependent` and friends route Mochi through the .NET pipeline; `mochi run` keeps the vm3 path; MEP-45's C target stays the AOT single-binary story; MEP-46's BEAM target stays the supervision/hot-reload story; MEP-47's JVM target stays the Maven Central / Loom story. The .NET target is the NuGet, CLR reified generics, value types, LINQ, `System.Threading.Channels`, async/await, and NativeAOT story. The master correctness gate is byte-equal stdout against vm3 on the full fixture corpus across .NET 8 LTS and .NET 10 LTS on x86_64-linux-gnu, aarch64-linux-gnu, aarch64-darwin, and x86_64-windows. Mochi agents lower to `Channel<TMessage>` plus async dispatch loops, streams to `IAsyncEnumerable<T>`, sum types to sealed `abstract record` + `sealed record` hierarchies, match to C# 8+ switch expressions with C# 11 list patterns, strings to UTF-8 spans at boundaries and `System.String` (UTF-16) internally, fun types to `Func<...>`/`Action<...>` delegates. The runtime library `Mochi.Runtime` (Apache-2.0) publishes to NuGet as a thin layer over `System.Text.Json`, `System.Threading.Channels`, `System.Linq.Async`, `System.Collections.Immutable`, `System.Net.Http`, and `System.Diagnostics.DiagnosticSource`. The 18-phase delivery plan walks from hello-world through scalars, collections, records, sums, closures, queries, datalog, agents, streams, async, .NET FFI, LLM, fetch, then framework-dependent, self-contained, NativeAOT publish, reproducibility, and trim-clean. Each phase is gated against vm3. Twelve research notes covering every lowering case live under ~/notes/Spec/0048/.",
+    "slug": "/docs/mep/mep-0048"
+  },
+  {
+    "number": 49,
+    "title": "Mochi-to-Swift transpiler: Apple platforms via SwiftPM, actor + AsyncStream agents, static Linux/Windows binaries",
+    "status": "Draft",
+    "type": "Standards Track",
+    "description": "Standalone pipeline that lowers a type-checked Mochi program to Swift 6.0 source, drives swiftc through SwiftPM (`swift build`) for libraries and Linux/Windows executables, and through xcodebuild for iOS/macOS/watchOS/tvOS/visionOS app bundles. MEP-49 owns its emit pass and its runtime library `MochiRuntime` (a SwiftPM package) but reuses MEP-45's `aotir` IR plus monomorphisation/closure-conversion passes shared with MEP-46, MEP-47, and MEP-48. The proposal is additive: `mochi build --target=swift-ios`, `--target=swift-macos`, `--target=swift-linux-static`, `--target=swift-windows` and friends route Mochi through the Swift pipeline; `mochi run` keeps the vm3 path; MEP-45's C target stays the AOT single-binary story; MEP-46's BEAM target stays the supervision/hot-reload story; MEP-47's JVM target stays the Maven Central / Loom story; MEP-48's .NET target stays the NuGet / NativeAOT story. The Swift target is the Apple App Store, SwiftUI-adjacent, server-side-Swift, CLR-style reified generics and value types, AsyncSequence, and ARC story. The master correctness gate is byte-equal stdout against vm3 on the full fixture corpus across Swift 6.0 and Swift 6.1 on x86_64-linux-gnu, aarch64-linux-gnu, aarch64-darwin, and x86_64-windows. Mochi agents lower to Swift `actor` types with `AsyncStream<Message>` mailboxes, streams to `AsyncSequence`, sum types to `enum` with associated values and exhaustive `switch`, records to `@frozen public struct`, fun types to typed Swift closures (including `@Sendable` for actor-crossing), strings to Swift `String` (UTF-8-native since Swift 5.7), errors to typed `throws(E)` (SE-0413). The runtime library `MochiRuntime` (Apache-2.0) publishes to the Swift Package Index and Apple's draft Swift Package Registry as a thin re-export of apple/swift-collections, apple/swift-algorithms, apple/swift-async-algorithms, apple/swift-numerics, apple/swift-system, apple/swift-log, plus Mochi-specific helpers (agent supervisor, datalog evaluator, query DSL extensions, JSON helpers, ZonedDateTime). The 18-phase delivery plan walks from hello-world through scalars, collections, records, sums, closures, queries, datalog, agents, streams, async, Swift FFI, LLM (FoundationModels on Apple), fetch (URLSession), then iOS app bundle, reproducibility, static Linux SDK single binary, and App Store validation. Each phase is gated against vm3. Twelve research notes covering every lowering case live under ~/notes/Spec/0049/.",
+    "slug": "/docs/mep/mep-0049"
+  },
+  {
+    "number": 50,
+    "title": "Mochi-to-Kotlin transpiler: Kotlin Multiplatform via Gradle, coroutine + Channel agents, Android .aab, K/Native single binaries",
+    "status": "Draft",
+    "type": "Standards Track",
+    "description": "Standalone pipeline that lowers a type-checked Mochi program to Kotlin 2.1 source, drives kotlinc through Gradle (`./gradlew build`) for Kotlin Multiplatform (KMP) projects spanning JVM, Android, Kotlin/Native (iOS, macOS, Linux, Windows), Kotlin/JS, and Kotlin/Wasm, and through the Android Gradle Plugin for Android `.aab` and `.apk` bundles. MEP-50 owns its emit pass and its runtime library `MochiRuntime` (a KMP Gradle module) but reuses MEP-45's `aotir` IR plus monomorphisation, match-to-decision-tree, closure-conversion, and exhaustiveness passes shared with MEP-46, MEP-47, MEP-48, and MEP-49. The proposal is additive: `mochi build --target=kotlin-jvm`, `--target=kotlin-android`, `--target=kotlin-ios-arm64`, `--target=kotlin-macos-arm64`, `--target=kotlin-linux-x64`, `--target=kotlin-linux-arm64`, `--target=kotlin-windows-x64`, `--target=kotlin-js-browser`, `--target=kotlin-js-node`, `--target=kotlin-wasm-js`, and `--target=kotlin-kmp-library` route Mochi through the Kotlin pipeline; `mochi run` keeps the vm3 path; MEP-45's C target stays the AOT single-binary story; MEP-46's BEAM target stays the supervision/hot-reload story; MEP-47's JVM target stays the direct-bytecode Maven Central / Loom story (distinct from MEP-50's source-level JVM output); MEP-48's .NET target stays the NuGet / NativeAOT story; MEP-49's Swift target stays the App Store / Apple platform story. The Kotlin target is the Android-first, Google Play Console, Kotlin Multiplatform iOS/desktop, Jetpack Compose, server-side Ktor, K2 compiler, sealed-interface ADT, kotlinx.coroutines structured-concurrency story. The master correctness gate is byte-equal stdout against vm3 on the full fixture corpus across Kotlin 2.1.0 and Kotlin 2.1.20 on x86_64-linux-gnu, aarch64-linux-gnu, aarch64-darwin, and x86_64-windows. Mochi agents lower to a custom actor class wrapping a `Channel<Message>` plus a `CoroutineScope(SupervisorJob() + Dispatchers.Default)` receive loop (the deprecated `actor { }` builder is not used), streams to `kotlinx.coroutines.flow.Flow<T>`, sum types to `sealed interface` with `data class` and `data object` variants, records to `data class`, fun types to Kotlin function or `suspend` function types, strings to Kotlin `String`, errors to a custom sealed `MochiResult<T, E>` return value (no checked exceptions). The runtime library `MochiRuntime` (Apache-2.0, ~6000 LOC) publishes to Maven Central as a KMP artifact and re-exports `kotlinx.coroutines`, `kotlinx.serialization`, `kotlinx.collections.immutable`, `kotlinx.datetime`, plus Mochi-specific helpers (agent supervisor, Datalog evaluator, query DSL extensions, JSONValue, ZonedDateTime). The 18-phase delivery plan walks from hello-world through scalars, collections, records, sums, closures, queries, datalog, agents, streams, async, FFI, LLM, fetch, Android App Bundle, reproducibility, K/Native single binaries, and Play Console validation. Each phase is gated against vm3. Twelve research notes covering every lowering case live under ~/notes/Spec/0050/.",
+    "slug": "/docs/mep/mep-0050"
+  },
+  {
+    "number": 51,
+    "title": "Mochi-to-Python transpiler: typed CPython 3.12 source, asyncio.Queue + TaskGroup agents, uv + hatchling wheels, ipykernel for Jupyter, PyPI Trusted Publishing",
+    "status": "Draft",
+    "type": "Standards Track",
+    "description": "Standalone pipeline that lowers a type-checked Mochi program to typed CPython 3.12+ source, drives the produced `pyproject.toml` project through uv 0.4+ and the PEP 517 `hatchling` build backend, and ships wheels (`.whl`), source distributions (`.tar.gz`), and a Jupyter `ipykernel` kernelspec ready for cell-by-cell execution inside JupyterLab. MEP-51 owns its emit pass and its runtime library `mochi_runtime` (a pure-Python PyPI package with optional native extensions) but reuses MEP-45's `aotir` IR plus monomorphisation, match-to-decision-tree, closure-conversion, and exhaustiveness passes shared with MEP-46, MEP-47, MEP-48, MEP-49, and MEP-50. The proposal is additive: `mochi build --target=python-wheel`, `--target=python-sdist`, `--target=python-ipykernel`, `--target=python-app`, and `--target=python-source` route Mochi through the Python pipeline; `mochi run` keeps the vm3 path; MEP-45 stays the AOT single-binary story; MEP-46 stays the BEAM supervision story; MEP-47 stays the direct-bytecode JVM and Loom story; MEP-48 stays the .NET NuGet and NativeAOT story; MEP-49 stays the Apple App Store story; MEP-50 stays the Android and Kotlin Multiplatform story. The Python target is the PyPI, NumPy / pandas / scikit-learn / PyTorch / JAX, FastAPI, Jupyter notebook, data-science, scripting, and machine-learning ecosystem story. The master correctness gate is byte-equal stdout against vm3 on the full fixture corpus across CPython 3.12.0 and CPython 3.13.0 on x86_64-linux-gnu, aarch64-linux-gnu, aarch64-darwin, and x86_64-windows; secondary compile-gates are `mypy --strict --python-version=3.12` and `pyright --strict` with no diagnostics and no `Any` leakage. Mochi agents lower to a custom Python class wrapping `asyncio.Queue[Message]` plus a `TaskGroup` (PEP 654) supervision scope; the legacy `asyncio.gather` is not used as the supervision primitive. Streams lower to `collections.abc.AsyncIterator`. Sum types lower to PEP 695 `type` aliases over frozen-slots `@dataclass(frozen=True, slots=True)` variants with exhaustive `match` (PEP 634). Records lower to frozen-slots dataclasses. Function types lower to `collections.abc.Callable` (sync) or `collections.abc.Awaitable` (async). Strings lower to `str` with code-point semantics matching Mochi. Errors lower to a custom `MochiResult` tagged union (Ok/Err) rather than Python exceptions, except where Mochi `panic` lowers to `raise RuntimeError`. The runtime library `mochi_runtime` (Apache-2.0, ~7000 LOC of Python plus optional ~500 LOC of C extension) publishes to PyPI as `mochi-runtime`, depends on `httpx` for HTTP, `anyio` only via the asyncio adapter (no Trio runtime path), and exposes a small Datalog engine, JSONValue ADT, agent supervisor, ZonedDateTime helpers over `zoneinfo`, and query DSL extensions. The 18-phase delivery plan walks from hello-world through scalars, collections, records, sums, closures, queries, datalog, agents, streams, async coloring, FFI (ctypes + CFFI), LLM, fetch, wheel/sdist build, reproducibility, ipykernel, and PyPI Trusted Publishing. Each phase is gated against vm3, mypy, pyright, and ruff. Twelve research notes covering every lowering case live under ~/notes/Spec/0051/.",
+    "slug": "/docs/mep/mep-0051"
+  },
+  {
+    "number": 52,
+    "title": "Mochi-to-TypeScript/JavaScript transpiler: TS 5.6 strict source + ES2024 JS dist, AsyncIterableQueue + AbortController agents, npm + tsc canonical, JSR + Deno + Bun + browser secondary, npm Trusted Publishing",
+    "status": "Draft",
+    "type": "Standards Track",
+    "description": "Standalone pipeline that lowers a type-checked Mochi program to typed TypeScript 5.6 source under strict mode (`--strict --noUncheckedIndexedAccess --exactOptionalPropertyTypes --noImplicitOverride --noFallthroughCasesInSwitch --noPropertyAccessFromIndexSignature`), drives the produced `package.json` project through npm 10+ as the canonical driver, runs `tsc --build` to emit ES2024 ECMAScript modules under `dist/{node,deno,bun,browser}/` with per-runtime conditional exports, and ships either standalone `.ts` source (`mochi build --target=typescript-source`), pre-compiled npm packages (`--target=npm-package`), Deno JSR distributions (`--target=deno-jsr`), single-file browser bundles via esbuild (`--target=browser-bundle`), or Deno Jupyter kernelspecs (`--target=deno-jupyter`). MEP-52 owns its emit pass and its runtime library `@mochi/runtime` (a TypeScript ESM package shipping under MIT plus Apache-2.0 dual license to npm and JSR) but reuses MEP-45's `aotir` IR plus monomorphisation, match-to-decision-tree, closure-conversion, exhaustiveness, and sendability passes shared with MEP-46 through MEP-51. The proposal is additive: `mochi build --target=typescript-source`, `--target=npm-package`, `--target=deno-jsr`, `--target=browser-bundle`, and `--target=deno-jupyter` route Mochi through the TypeScript pipeline; `mochi run` keeps the vm3 path; MEP-45 stays the AOT single-binary story; MEP-46 stays the BEAM supervision story; MEP-47 stays the direct-bytecode JVM and Loom story; MEP-48 stays the .NET NuGet and NativeAOT story; MEP-49 stays the Apple App Store story; MEP-50 stays the Android and Kotlin Multiplatform story; MEP-51 stays the PyPI, NumPy, and Jupyter ipykernel story. The TypeScript/JavaScript target is the npm ecosystem (over 3 million packages on npmjs.org as of 2026 Q1), the React/Vue/Svelte/SolidJS UI tier, the Node.js server tier (Express/Fastify/Hono/Elysia), the Deno Deploy and Cloudflare Workers edge tier, the Bun-native server tier, the only Mochi target that reaches the browser without a server install, the Electron and Tauri desktop tier, and the Jupyter notebook tier via Deno's official kernel. The master correctness gate is byte-equal stdout against vm3 on the full fixture corpus across Node 22 LTS, Deno 2.x, Bun 1.1.x, and headless browser (Playwright + Chromium 130+) on x86_64-linux-gnu, aarch64-linux-gnu, aarch64-darwin, and x86_64-windows; secondary compile-gates are `tsc --noEmit --strict --noUncheckedIndexedAccess --exactOptionalPropertyTypes` (zero diagnostics) and `eslint --max-warnings 0` with `@typescript-eslint/recommended-type-checked`. Mochi agents lower to a hand-rolled `AsyncIterableQueue<T>` mailbox plus an `AbortController` supervision scope; `Promise.withResolvers()` (ES2024) carries the `call(req)` reply future. Streams lower to `AsyncIterable<T>` / `AsyncGenerator<T, void, undefined>`. Sum types lower to discriminated unions over a literal `kind` tag with exhaustive `switch (x.kind)` enforced by `tsc --strict`. Records lower to `class` with `readonly` fields plus a private constructor and a static `of()` factory. Function types lower to `(args) => R` (sync) or `(args) => Promise<R>` (async). Strings lower to `string` (UTF-16 internal); the runtime ships `mochiStrLen(s)` and `mochiStrIndex(s, i)` for code-point semantics. Errors lower to a `MochiResult<T, E>` discriminated union (`{kind: 'ok', value: T} | {kind: 'err', error: E}`) rather than thrown exceptions; `panic` lowers to `throw new MochiPanic(msg)`. The runtime library `@mochi/runtime` (~6500 LOC of TypeScript across approximately 35 modules, zero npm dependencies in the default build, optional Node N-API / Bun FFI / Deno FFI bindings under sub-paths) publishes to npm with `--provenance` (Sigstore + GitHub OIDC, GA April 2024) and to JSR (`jsr.io`) for Deno-native consumption. The 18-phase delivery plan walks from hello-world through scalars, collections, records, sums, closures, queries, datalog, agents, streams, async coloring, FFI, LLM, fetch, then npm packaging, reproducibility, Deno JSR plus Jupyter plus browser, and npm Trusted Publishing. Each phase is gated against vm3, tsc strict, eslint, prettier, and execution on all four runtimes. Twelve research notes covering every lowering case live under ~/notes/Spec/0052/.",
+    "slug": "/docs/mep/mep-0052"
+  },
+  {
+    "number": 53,
+    "title": "Mochi-to-Rust transpiler: cargo-friendly source emission, structural rtree AST, single-thread channels and streams, FFI via sidecar C, reproducible cargo builds, wasm32-wasip1, and no_std embedded variant",
+    "status": "Active",
+    "type": "Standards Track",
+    "description": "Standalone pipeline that lowers a type-checked Mochi program to Rust source emitted via a structural rtree AST, then drives cargo to ship a single-file native binary on the host triple, x86_64-unknown-linux-musl, aarch64-unknown-linux-musl, and wasm32-wasip1, plus a no_std + alloc embedded variant. MEP-53 owns its emit pass and its runtime crate `mochi-runtime` but reuses MEP-45's `aotir` IR plus monomorphisation and closure-conversion passes shared with MEP-46, MEP-47, MEP-48, MEP-49, MEP-50, MEP-51, MEP-52, and MEP-56. The proposal is additive: `mochi build --target=rust` and `--target=rust-source / --target=rust-crate / --target=wasm32-wasip1` route Mochi through the Rust pipeline; vm3 and the C / BEAM / JVM / .NET / Swift / Kotlin / Python / TypeScript / Ruby targets are unaffected. The master correctness gate is byte-equal stdout against vm3 on the full fixture corpus across stable Rust 1.95 host (aarch64-apple-darwin), cargo-zigbuild Linux musl x64 and arm64, wasm32-wasip1 under wasmtime, and `cargo check --no-default-features --features embedded` for the no_std + alloc subset. Mochi channels lower to a single-thread `Rc<RefCell<VecDeque>>` queue (no `std::sync`), streams to a single-thread broadcast over `Rc<RefCell<Vec<Rc<RefCell<VecDeque>>>>>`, sum types to tagged `enum` variants with `#[derive(Clone, Debug, PartialEq)]`, records to `#[derive(...)]` structs, closures to `Box<dyn Fn(...)>` with explicit capture clauses, agents to plain structs plus impl blocks, panic / try / catch to `std::panic::catch_unwind` with an `i64` payload, FFI to a sidecar `cffi/` C library wired through `cc-rs` build script, `httpGet` to a hand-rolled HTTP/1.1 GET over `std::net::TcpStream`, `json_decode` to a 90-LOC string-coercing object decoder, LLM `generate <provider> { ... }` to cassette replay keyed by SHA-256 of `provider:prompt`, and reproducible builds to SOURCE_DATE_EPOCH=0 plus RUSTFLAGS=-C strip=symbols (with a known-skip on macOS for LC_UUID non-determinism). The runtime crate `mochi-runtime` (Apache-2.0) ships `io`, `conv`, `strings`, `chan`, `stream`, `panic`, `fetch`, `json`, `llm`, and `check`, gated so that the `embedded` feature drops everything except `conv` and `strings`. The 19-phase delivery plan walks from skeleton through hello-world, scalars, collections, records, sums, closures, queries, datalog, agents, streams, try/catch, FFI, LLM, fetch, publish-ready crate metadata, reproducibility, wasm, and embedded. Each phase is gated against vm3.",
+    "slug": "/docs/mep/mep-0053"
+  },
+  {
+    "number": 54,
+    "title": "Mochi-to-Go transpiler: goroutine agents, channel streams, go module packaging, CGo FFI, static single binaries",
+    "status": "Active",
+    "type": "Standards Track",
+    "description": "Standalone pipeline that lowers a type-checked Mochi program to Go 1.22+ source emitted via a structural gotree AST, compiled with the standard go toolchain to a statically linked single binary on the host triple, linux/amd64, linux/arm64, darwin/amd64, darwin/arm64, and windows/amd64 (via GOOS/GOARCH cross). MEP-54 owns its emit pass and its runtime package github.com/mochilang/mochi-go but reuses MEP-45 aotir IR plus monomorphisation and closure-conversion passes shared with MEP-46, MEP-47, MEP-48, MEP-49, MEP-50, MEP-51, MEP-52, and MEP-53. Mochi agents lower to goroutines with a buffered channel mailbox, streams to a fan-out broadcast over a slice of buffered channels, sum types to a tagged struct union with a uint8 tag, records to plain structs, closures to function literals with captured variables, async to goroutine + channel rendezvous, FFI to CGo declarations, LLM to cassette replay keyed by SHA-256 of provider:prompt, fetch to net/http, and reproducible builds to -trimpath plus SOURCE_DATE_EPOCH=0.",
+    "slug": "/docs/mep/mep-0054"
+  },
+  {
+    "number": 55,
+    "title": "Mochi-to-PHP 8.4 transpiler: Composer + Packagist canonical, Phar + FrankenPHP + RoadRunner packaging, GPG-signed releases with Sigstore attestation",
+    "status": "Final",
+    "type": "Standards Track",
+    "description": "Standalone pipeline that lowers a type-checked Mochi program to PHP 8.4 source under `declare(strict_types=1);`, drives the produced Composer package through `composer install` plus PHPStan level 9 strict + Psalm 6 level 1 + php-cs-fixer (PER-CS2.0 + PHP84Migration), and ships either standalone `main.php` source (`mochi build --target=php-source`), a runnable Phar archive (`--target=php-phar`), a FrankenPHP app-server bundle (`--target=php-frankenphp`), or a RoadRunner worker-mode bundle (`--target=php-roadrunner`). MEP-55 owns its emit pass and its runtime library `mochi/runtime` (a Composer package shipping under MIT to Packagist) but reuses MEP-45's `aotir` IR plus monomorphisation, match-to-decision-tree, closure-conversion, exhaustiveness, and sendability passes shared with MEP-46 through MEP-54. The proposal is additive: `mochi build --target=php-source`, `--target=php-phar`, `--target=php-frankenphp`, and `--target=php-roadrunner` route Mochi through the PHP pipeline; `mochi run` keeps the vm3 path; MEP-45 stays the AOT single-binary story; MEP-46 stays the BEAM supervision story; MEP-47 stays the direct-bytecode JVM and Loom story; MEP-48 stays the .NET NuGet and NativeAOT story; MEP-49 stays the Apple App Store story; MEP-50 stays the Android and Kotlin Multiplatform story; MEP-51 stays the PyPI, NumPy, and Jupyter ipykernel story; MEP-52 stays the npm, JSR, and TypeScript-ESM story; MEP-53 stays the Rust crates.io, no_std, and embedded story; MEP-54 stays the Erlang/OTP supervision tree story. The PHP/Packagist target is the WordPress ecosystem, the Laravel, Symfony, and Drupal application tier, the Composer registry (over 400000 packages on Packagist), and the still-largest server-side web language by CMS deployment. The master correctness gate is byte-equal stdout against vm3 on the full fixture corpus across PHP 8.4.0 and PHP 8.4 latest on `ubuntu-24.04`, with `8.5` running allow-failure as a forward-compat smoke. Secondary compile-gates are `phpstan analyse --level=9 --error-format=raw` (zero errors), `psalm --no-cache --threads=1 --show-info=true` (zero issues), and `php-cs-fixer fix --dry-run --diff` (zero rewrites). Mochi agents lower to a final class wrapping a userland Channel<Message> (FIFO array + counter) plus a synchronous receive loop, since PHP has no preemptive scheduler; streams lower to a final class implementing `IteratorAggregate` and exposing `subscribe(int $limit)` with explicit backpressure (`drop` when full); sum types lower to an `abstract readonly class` (PHP 8.4 readonly inheritance) with `final readonly class` variants; records lower to `final readonly class` with constructor promotion; closures lower to PHP 8.1 first-class callable syntax (`$obj->method(...)`); function types lower to `Closure(string, int): bool` PHPDoc with Psalm/PHPStan inference; strings lower to PHP `string` (byte sequence); errors lower to a Result-style discriminated `final readonly class Ok` / `final readonly class Err` rather than throwing exceptions; `panic` lowers to `throw new \\RuntimeException`. The runtime library `mochi/runtime` (~3500 LOC of PHP across ~25 files, zero Composer runtime deps in the default build, `psalm` and `phpstan` as dev-only deps, optional `amphp/revolt` deferred to a future MEP for true non-blocking I/O) publishes to Packagist with GPG-signed tags plus a Sigstore-backed `actions/attest-build-provenance@v1` OIDC attestation plus optional `drupal/php-signify` Ed25519 detached signatures. The 18-phase delivery plan walks from hello-world through scalars, collections, records, sums, closures, queries, datalog, agents, streams, async coloring (sync wrappers), FFI (FFI extension + sodium), LLM (cassette dispatch), fetch (curl), then Composer + PHPStan + Psalm green, reproducibility, Phar + FrankenPHP + RoadRunner packaging, and signed Packagist publication. Each phase is gated against vm3, PHPStan, Psalm, and execution on `8.4.0` and `8.4` latest. MEP-55 shipped as a single umbrella PR (#22481) on 2026-05-29 with all 18 phases pre-merged onto `impl/mep-0055-php`.",
+    "slug": "/docs/mep/mep-0055"
+  },
+  {
+    "number": 56,
+    "title": "Mochi-to-Ruby transpiler: gem-friendly source emission, Data.define records, Channel agents, Thread::SizedQueue streams, Tebako and TruffleRuby native packaging",
+    "status": "Active",
+    "type": "Standards Track",
+    "description": "Standalone pipeline that lowers a type-checked Mochi program to Ruby source emitted via a structural rtree AST, runnable on CRuby 3.2+, JRuby 10, TruffleRuby 33, and mruby 4. Packages the resulting .rb as a single script, a RubyGems gem, a Bundler bundle, a Jupyter IRuby notebook, a Tebako single-file binary, a TruffleRuby native-image, or an mruby embedded build. MEP-56 owns its emit pass and its runtime library `mochi-runtime` but reuses MEP-45's `aotir` IR plus monomorphisation and closure-conversion passes shared with MEP-46, MEP-47, and MEP-48. The proposal is additive: `mochi build --target=ruby-source` and friends route Mochi through the Ruby pipeline; vm3 and the C/BEAM/JVM/.NET targets are unaffected. The master correctness gate is byte-equal stdout against vm3 on the full fixture corpus across CRuby 3.2 LTS, CRuby 3.4, CRuby 4.0, JRuby 10, and TruffleRuby 33. Mochi agents lower to Ruby classes (with `spawn AgentType()` constructing zero-valued instances and intent calls routing through ordinary method dispatch), streams to a bounded MPMC broadcast channel built on `Thread::SizedQueue`, sum types to `Data.define` value classes plus case/in pattern matching, match to `case/in`, strings to UTF-8 (Ruby 3.2+ default encoding), and fun types to lambdas. The runtime library `mochi-runtime` (Apache-2.0) ships `Mochi::Runtime::Stream`, `Mochi::Runtime::Panic`, and `Mochi::Runtime::IO.putln` (deterministic float formatting). The 28-phase delivery plan walks from hello-world through scalars, collections, records, sums, closures, queries, datalog, channels, agents, streams, async, deep string ops, file/JSON/CSV/HTTP, try/catch, spawn, then RubyGem, Bundler, IRuby kernel, Tebako, TruffleRuby native, and mruby packaging. Each phase is gated against vm3.",
+    "slug": "/docs/mep/mep-0056"
+  },
+  {
+    "number": 57,
+    "title": "Mochi module and package system: mochi.toml manifest + mochi.lock text lockfile + PubGrub-derived solver + sparse HTTPS registry index + BLAKE3 + SHA-256 dual-hashed content-addressed object store + Sigstore + OIDC keyless trusted publishing + capability declarations at the package boundary + polyglot fan-out to npm + JSR + PyPI + Maven Central + NuGet + crates.io + Hex + Swift Package Index",
+    "status": "Draft",
+    "type": "Standards Track",
+    "description": "First source-level package management system for Mochi. Specifies a TOML manifest (`mochi.toml`, Cargo / uv / Pixi shaped, plus three Mochi-only sections: `[capabilities]`, `[targets]`, `[provenance]`); a text lockfile (`mochi.lock`, TOML-shaped, version envelope, sorted keys, byte-stable serialisation, per-platform resolution sections); a PubGrub-derived version solver with incompatibility-driven conflict explanations (the algorithm used by uv since 2024, by Cargo's RFC #3796 next-gen resolver, by Rye, and by Dart's pub since 2018); a sparse HTTPS registry index at `index.mochi.dev` (Cargo-style, GA March 2023, 5-20x faster than git-cloned indexes at scale); a content-addressed object store keyed on BLAKE3-256 (primary, parallel, 3-7x faster than SHA-256) plus SHA-256 (secondary, for SLSA / Sigstore / npm interop) under `blobs.mochi.dev`; Sigstore-keyless trusted publishing via GitHub Actions / GitLab CI OIDC token exchange with Fulcio (matching npm Trusted Publishing GA April 2024, Maven Central Sigstore GA October 2024, PyPI PEP 740 GA late 2025, Cargo RFC #3724); capability declarations at the package boundary (closed set: `fs.read`, `fs.write`, `net.dial`, `net.listen`, `env`, `ffi`, `clock`, `random`, `proc.spawn`) audited at lock time and enforced at the transpiler boundary (Deno permissions, Wasm component model imports, Python `mochi_runtime.caps` runtime checks); polyglot fan-out from one `mochi.toml` to eight ecosystem artifacts (Mochi central, npm + JSR via MEP-52, PyPI via MEP-51, Maven Central via MEP-47, NuGet via MEP-48, crates.io via MEP-53, Hex via MEP-46, Swift Package Index via MEP-49); a SBOM and provenance pipeline emitting CycloneDX 1.6 and SPDX 3.0 plus per-target in-toto attestations; a `mochi audit` advisory-database query path against an RustSec-style YAML feed; reproducible package builds under `SOURCE_DATE_EPOCH` plus a sorted-tar normaliser producing byte-identical `.mochi.tar.zst`; a `mochi vendor` offline path; a registry mirror replication protocol; and a 20-phase delivery plan from package-stub skeleton through manifest, workspaces, lockfile, solver, local + network indexes, content store, capabilities, mirror, publish, trusted publishing, polyglot, SBOM, advisory DB, reproducibility, vendor, and workspace cache. Each phase is gated against the PubGrub fixture corpus, the lockfile byte-identical reproducibility check, four-platform CI (linux-x86_64 + linux-arm64 + macos-arm64 + windows-x86_64), Sigstore round-trip via a sigstore-mock-fulcio harness, CycloneDX schema validation, and an `mochi why` explanation-quality test. The reference implementation lives under `pkg/{pkgmanifest,pkglock,pkgsolver/pubgrub,pkgindex,pkgblob,pkgsign,pkgcap,pkgfanout}` plus `cmd/mochi/pkg.go`. Twelve research notes under `~/notes/Spec/0057/` cover prior art across Cargo, Go modules + workspaces, Deno + JSR, Bun, npm + Trusted Publishing, Python uv + PEP 751, Bazel bzlmod, Nix flakes, Swift PM, Hex, NuGet central package management, Pixi, Spack, Pkl, and the recent (2024-2026) literature on PubGrub, supply-chain provenance (Sigstore, SLSA, in-toto), reproducible builds, content-addressed code (Unison), capability-safe imports (Deno permissions, Wasm Component Model, Pony, Roc platforms), and empirical package-ecosystem studies.",
+    "slug": "/docs/mep/mep-0057"
+  }
+]
