@@ -1,5 +1,16 @@
 [
   {
+    "tag": "v0.16.0",
+    "major": 0,
+    "minor": 16,
+    "patch": 0,
+    "file": "v0.16.0.md",
+    "month": "May 2026",
+    "summary": "v0.16.0 completes the Mochi-to-Swift transpiler. Every phase of MEP-49 is now landed and the MEP is marked Final. You can compile a Mochi source file to a runnable Swift binary on macOS 15, an iOS app bundle for the App Store, or a...",
+    "docId": "releases/v0.16.0",
+    "slug": "/docs/releases/v0.16.0"
+  },
+  {
     "tag": "v0.15.0",
     "major": 0,
     "minor": 15,
