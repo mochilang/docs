@@ -11,3 +11,18 @@ build/
 # macOS
 .DS_Store
 .DS_Store?
+
+# Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env
+.env
+.env.local
