@@ -1,67 +1,60 @@
-name: Deploy to Cloudflare Pages
-
-# Deploys on every push to main (auto-synced from mochilang/mochi).
-# Only one deploy runs at a time; new push supersedes in-progress build.
-#
-# Build time budget (target <3 min end-to-end on warm cache):
-#   checkout:         ~5s
-#   node setup:       ~3s  (npm cache hit)
-#   npm ci:           ~8s  (prefer-offline)
-#   docusaurus build: ~30s (webpack incremental, warm cache)
-#   wrangler deploy:  ~20s
-#   total:            ~66s
+name: Deploy website to GitHub Pages
 
 on:
   push:
     branches: [main]
+    paths:
+      - 'website/**'
   workflow_dispatch:
 
 permissions:
   contents: read
-  deployments: write
+  pages: write
+  id-token: write
 
 concurrency:
-  group: deploy
-  cancel-in-progress: true
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  deploy:
-    name: Build and deploy
+  build:
+    name: Build Docusaurus site
     runs-on: ubuntu-latest
-
+    defaults:
+      run:
+        working-directory: website
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 1
+          fetch-depth: 0
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 20
           cache: npm
+          cache-dependency-path: website/package-lock.json
 
       - name: Install dependencies
-        run: npm ci --prefer-offline
+        run: npm ci
 
-      - name: Restore Docusaurus build cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            .docusaurus
-            node_modules/.cache
-          key: docusaurus-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-${{ hashFiles('docs/**', 'src/**', 'docusaurus.config.js', 'sidebars.js') }}
-          restore-keys: |
-            docusaurus-${{ runner.os }}-${{ hashFiles('package-lock.json') }}-
-            docusaurus-${{ runner.os }}-
-
-      - name: Build
+      - name: Build website
         run: npm run build
 
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy build --project-name=mochi-lang --branch=main
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          path: website/build
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
