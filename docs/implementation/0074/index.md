@@ -21,18 +21,18 @@ A phase is LANDED only when its gate is green for every applicable target (consu
 | 3 | go/packages ingest helper (`package3/go/cmd/go-ingest`) | LANDED | (pending) | [phase-03](/docs/implementation/0074/phase-03-gopackages-ingest) |
 | 4 | ApiSurface JSON schema + bridge-side parser | LANDED | (pending) | [phase-04](/docs/implementation/0074/phase-04-apisurface) |
 | 5 | Closed type-mapping table (scalars / strings / `[]byte` / `[]T` / `map[K]V` / structs / interfaces / `chan T` / `func` / `error` / generics) | LANDED | (pending) | [phase-05](/docs/implementation/0074/phase-05-typemap) |
-| 6 | Cgo wrapper synthesiser (`//export` directives + `c-archive` + handle pool) | NOT STARTED | — | [phase-06](/docs/implementation/0074/phase-06-wrapper) |
-| 7 | Mochi-side extern fn emitter + alias shim file generation | NOT STARTED | — | [phase-07](/docs/implementation/0074/phase-07-extern-emit) |
-| 8 | `import go "<module>@<semver>" as <alias>` grammar + parser | NOT STARTED | — | [phase-08](/docs/implementation/0074/phase-08-import-grammar) |
-| 9 | Build orchestration: workspace synth + `go build -buildmode=c-archive` + artifact link | NOT STARTED | — | [phase-09](/docs/implementation/0074/phase-09-build) |
-| 10 | mochi.lock `[[go-package]]` integration + `--check` mode | NOT STARTED | — | [phase-10](/docs/implementation/0074/phase-10-lockfile) |
-| 11 | `TargetGoLibrary` emit (`go.mod` + exported package + `_cgo_export.h`) | NOT STARTED | — | [phase-11](/docs/implementation/0074/phase-11-go-library-emit) |
-| 12 | Git-tag publish flow (`mochi pkg publish --to=git-tag`) + canonical-import-path gate | NOT STARTED | — | [phase-12](/docs/implementation/0074/phase-12-git-tag-publish) |
-| 13 | Cosign-on-sibling-tag opt-in (`mochi pkg publish --cosign-sign`) | NOT STARTED | — | [phase-13](/docs/implementation/0074/phase-13-cosign) |
-| 14 | Goroutine bridge (cgo handle pool + channel-as-handle + callback-as-handle) | NOT STARTED | — | [phase-14](/docs/implementation/0074/phase-14-goroutine-bridge) |
-| 15 | Monomorphisation (`[go.monomorphise]` manifest + per-instantiation wrapper) | NOT STARTED | — | [phase-15](/docs/implementation/0074/phase-15-monomorphise) |
-| 16 | TinyGo embedded subset (`profile = "embedded"` + `//go:linkname` wrapper) | NOT STARTED | — | [phase-16](/docs/implementation/0074/phase-16-tinygo-embedded) |
-| 17 | Vanity-import resolver + wasm-wasip1 / wasm-js publish gate (wazero host integration) | NOT STARTED | — | [phase-17](/docs/implementation/0074/phase-17-vanity-and-wasm) |
+| 6 | Cgo wrapper synthesiser (`//export` directives + `c-archive` + handle pool) | LANDED (baseline; 6.1+ deferred) | (pending) | [phase-06](/docs/implementation/0074/phase-06-wrapper) |
+| 7 | Mochi-side extern fn emitter + alias shim file generation | LANDED (baseline; 7.1+ deferred) | (pending) | [phase-07](/docs/implementation/0074/phase-07-extern-emit) |
+| 8 | `import go "<module>@<semver>" as <alias>` grammar + parser | LANDED | (pending) | [phase-08](/docs/implementation/0074/phase-08-import-grammar) |
+| 9 | Build orchestration: workspace synth + `go build -buildmode=c-archive` + artifact link | LANDED (baseline; 9.1+ deferred) | (pending) | [phase-09](/docs/implementation/0074/phase-09-build) |
+| 10 | mochi.lock `[[go-package]]` integration + `--check` mode | LANDED (schema; 10.1+ CLI deferred) | (pending) | [phase-10](/docs/implementation/0074/phase-10-lockfile) |
+| 11 | `TargetGoLibrary` emit (`go.mod` + exported package + `_cgo_export.h`) | LANDED (baseline; 11.1+ deferred) | (pending) | [phase-11](/docs/implementation/0074/phase-11-library-emit) |
+| 12 | Git-tag publish flow (`mochi pkg publish --to=git-tag`) + canonical-import-path gate | LANDED (baseline; 12.1+ deferred) | (pending) | [phase-12](/docs/implementation/0074/phase-12-git-tag-publish) |
+| 13 | Cosign-on-sibling-tag opt-in (`mochi pkg publish --cosign-sign`) | LANDED (baseline; 13.1+ deferred) | (pending) | [phase-13](/docs/implementation/0074/phase-13-cosign) |
+| 14 | Goroutine bridge (cgo handle pool + channel-as-handle + callback-as-handle) | LANDED (baseline; 14.1+ deferred) | (pending) | [phase-14](/docs/implementation/0074/phase-14-goroutine-bridge) |
+| 15 | Monomorphisation (`[go.monomorphise]` manifest + per-instantiation wrapper) | LANDED (baseline; 15.1+ deferred) | (pending) | [phase-15](/docs/implementation/0074/phase-15-monomorphise) |
+| 16 | TinyGo embedded subset (`profile = "embedded"` + `//go:linkname` wrapper) | LANDED (baseline; 16.1+ deferred) | (pending) | [phase-16](/docs/implementation/0074/phase-16-tinygo-embedded) |
+| 17 | Vanity-import resolver + wasm-wasip1 / wasm-js publish gate (wazero host integration) | LANDED (baseline; 17.1+ deferred) | (pending) | [phase-17](/docs/implementation/0074/phase-17-vanity-and-wasm) |
 
 ## Target coverage matrix
 
@@ -46,18 +46,18 @@ Each phase's LANDED gate must be green for every applicable target. `n/a` cells 
 | 3. go/packages ingest | LANDED | n/a | n/a | n/a | n/a |
 | 4. ApiSurface JSON | LANDED | n/a | n/a | n/a | n/a |
 | 5. type-mapping table | LANDED | required | required | required | required |
-| 6. cgo wrapper synthesiser | NOT STARTED | required | required | n/a (cgo off on wasm) | required (no_cgo subset) |
-| 7. extern emitter | NOT STARTED | required | required | required | required |
-| 8. import-go grammar (semver) | NOT STARTED | required | required | required | required |
-| 9. build orchestration | NOT STARTED | required | required | required (no cgo) | required |
-| 10. mochi.lock integration | NOT STARTED | required | required | required | required |
-| 11. TargetGoLibrary emit | NOT STARTED | required | required | required | required |
-| 12. git-tag publish | NOT STARTED | n/a (publish is host-only) | n/a | n/a | n/a |
-| 13. cosign on tag.sig | NOT STARTED | n/a | n/a | n/a | n/a |
-| 14. goroutine bridge | NOT STARTED | required | required | n/a (no goroutines on wasm-js without scheduler shim) | required |
-| 15. monomorphisation | NOT STARTED | required | required | required | required |
-| 16. TinyGo embedded subset | NOT STARTED | n/a | n/a | required (wasm-js via tinygo) | required |
-| 17. vanity-import + WASI publish | NOT STARTED | required | required | required | n/a |
+| 6. cgo wrapper synthesiser | LANDED (baseline) | required | required | n/a (cgo off on wasm) | required (no_cgo subset) |
+| 7. extern emitter | LANDED (baseline) | required | required | required | required |
+| 8. import-go grammar (semver) | LANDED | required | required | required | required |
+| 9. build orchestration | LANDED (baseline) | required | required | required (no cgo) | required |
+| 10. mochi.lock integration | LANDED (schema) | required | required | required | required |
+| 11. TargetGoLibrary emit | LANDED (baseline) | required | required | required | required |
+| 12. git-tag publish | LANDED (baseline) | n/a (publish is host-only) | n/a | n/a | n/a |
+| 13. cosign on tag.sig | LANDED (baseline) | n/a | n/a | n/a | n/a |
+| 14. goroutine bridge | LANDED (baseline) | required | required | n/a (no goroutines on wasm-js without scheduler shim) | required |
+| 15. monomorphisation | LANDED (baseline) | required | required | required | required |
+| 16. TinyGo embedded subset | LANDED (baseline) | n/a | n/a | required (wasm-js via tinygo) | required |
+| 17. vanity-import + WASI publish | LANDED (baseline) | required | required | required | n/a |
 
 Cell legend: `required` means the phase's gate runs against this target; `n/a` means the phase's behaviour is intentionally not exercised on this target (architectural reason in parentheses).
 
@@ -95,8 +95,12 @@ package3/go/
   wrapper/                # cgo wrapper synthesiser (phase 6)
   emit/                   # Mochi extern fn emitter (phase 7)
   build/                  # workspace + go build orchestration (phase 9)
-  publish/                # git-tag publish + cosign (phases 12-13)
+  lockfile/               # `[[go-package]]` schema + drift check (phase 10)
+  library/                # TargetGoLibrary emit (phase 11)
+  publish/                # git-tag publish (phase 12)
+  cosign/                 # cosign-on-sibling-tag signer (phase 13)
   goroutine/              # cgo handle pool + bridge runtime (phase 14)
+  monomorphise/           # `[go.monomorphise]` parser + renderer (phase 15)
   tinygo/                 # TinyGo embedded subset (phase 16)
   vanity/                 # vanity-import redirect resolver (phase 17)
 ```
@@ -105,7 +109,7 @@ The `package3/go/` location is shared with the broader MEP-57 polyglot package w
 
 ## Status snapshot
 
-As of 2026-05-29: phases 0-5 LANDED on `main`, phases 6-17 NOT STARTED.
+As of 2026-05-30: all 18 phases (0-17) LANDED on `main` (phases 6 + 7 + 9 + 11 + 12 + 13 + 14 + 15 + 16 + 17 baseline only; phase 10 schema only; sub-phases 6.1+/7.1+/9.1+/10.1+/11.1+/12.1+/13.1+/14.1+/15.1+/16.1+/17.1+ deferred). The MEP-74 umbrella plan is complete at the baseline level; remaining work is per-phase sub-phase integration (wrapper-synth wiring, MEP-54 driver wiring, mochi.lock CLI, live-target gates).
 
 ## Cross-references
 

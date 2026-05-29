@@ -320,11 +320,19 @@
       "implementation/0057/phase-19-cache-perf"
     ]
   },
+  "implementation/0066/index",
+  {
+    "label": "MEP-66 phases",
+    "items": [
+      "implementation/0066/phase-00-skeleton"
+    ]
+  },
   "implementation/0071/index",
   {
     "label": "MEP-71 phases",
     "items": [
-      "implementation/0071/phase-00-skeleton"
+      "implementation/0071/phase-00-skeleton",
+      "implementation/0071/phase-01-simple-index"
     ]
   },
   "implementation/0073/index",
@@ -338,7 +346,13 @@
       "implementation/0073/phase-04-wrapper",
       "implementation/0073/phase-05-extern-emit",
       "implementation/0073/phase-06-import-grammar",
-      "implementation/0073/phase-07-build"
+      "implementation/0073/phase-07-build",
+      "implementation/0073/phase-08-lockfile",
+      "implementation/0073/phase-09-rust-library-emit",
+      "implementation/0073/phase-10-trusted-publish",
+      "implementation/0073/phase-11-async-bridge",
+      "implementation/0073/phase-12-monomorphise",
+      "implementation/0073/phase-13-embedded"
     ]
   },
   "implementation/0074/index",
@@ -350,7 +364,26 @@
       "implementation/0074/phase-02-sumdb",
       "implementation/0074/phase-03-gopackages-ingest",
       "implementation/0074/phase-04-apisurface",
-      "implementation/0074/phase-05-typemap"
+      "implementation/0074/phase-05-typemap",
+      "implementation/0074/phase-06-wrapper",
+      "implementation/0074/phase-07-extern-emit",
+      "implementation/0074/phase-08-import-grammar",
+      "implementation/0074/phase-09-build",
+      "implementation/0074/phase-10-lockfile",
+      "implementation/0074/phase-11-library-emit",
+      "implementation/0074/phase-12-git-tag-publish",
+      "implementation/0074/phase-13-cosign",
+      "implementation/0074/phase-14-goroutine-bridge",
+      "implementation/0074/phase-15-monomorphise",
+      "implementation/0074/phase-16-tinygo-embedded",
+      "implementation/0074/phase-17-vanity-and-wasm"
+    ]
+  },
+  "implementation/0075/index",
+  {
+    "label": "MEP-75 phases",
+    "items": [
+      "implementation/0075/phase-00-skeleton"
     ]
   },
   "implementation/0076/index"

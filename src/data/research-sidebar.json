@@ -235,6 +235,42 @@
     ]
   },
   {
+    "label": "MEP-0066",
+    "items": [
+      "research/0066/index",
+      "research/0066/language-surface",
+      "research/0066/design-philosophy",
+      "research/0066/prior-art",
+      "research/0066/beam-typespec-ingest",
+      "research/0066/type-mapping",
+      "research/0066/hex-publish-flow",
+      "research/0066/oidc-trusted-publishing",
+      "research/0066/port-bridge-protocol",
+      "research/0066/rebar3-lockfile",
+      "research/0066/otp-behaviors",
+      "research/0066/version-resolution",
+      "research/0066/risks-and-alternatives"
+    ]
+  },
+  {
+    "label": "MEP-0067",
+    "items": [
+      "research/0067/index",
+      "research/0067/language-surface",
+      "research/0067/design-philosophy",
+      "research/0067/prior-art",
+      "research/0067/maven-central-ingest",
+      "research/0067/type-mapping",
+      "research/0067/maven-publish-flow",
+      "research/0067/sigstore-attestation",
+      "research/0067/jni-bridge-protocol",
+      "research/0067/mochi-lock",
+      "research/0067/async-bridge",
+      "research/0067/generics-erasure",
+      "research/0067/risks-and-alternatives"
+    ]
+  },
+  {
     "label": "MEP-0071",
     "items": [
       "research/0071/index",
